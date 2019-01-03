@@ -44,7 +44,7 @@
             <th>查看详情</th>
         </tr>
         <c:forEach items="${customers}" var="customer" varStatus="status">
-            <tr <c:if test="${status.index % 2 !=0}"> style="background-color:#ECF6EE;"</c:if>>
+            <tr>
                 <td>${status.index + 1}</td>
                 <td>${customer.customer_name}</td>
                 <td>${customer.customer_sex}</td>
