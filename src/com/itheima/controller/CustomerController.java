@@ -23,6 +23,13 @@ public class CustomerController {
 		return "customer";
 	}
 
+    /**
+     * 查询所有的用户信息
+     * 可以根据手机号、姓名、身份证号组合查询客户信息
+     * 手机号:customer_mobile
+     * 姓名:customer_name
+     * 身份证号：customer_idcard
+     */
 	@RequestMapping("/findCustomerByConditions")
 	public String findCustomerByConditions(Customer customer, Model model) {
 		List<Customer> customers=customerService.findCustomerByConditions(customer);
@@ -30,6 +37,10 @@ public class CustomerController {
 		//返回客户信息展示页面
 		return "homepage";
 	}
+
+    /**
+     * 查询用户所有银行卡的信息
+     */
 	@RequestMapping("/findCustomerWithBanKcard")
 	public String findCustomerWithBanKcard(Integer id,Model model) {
 		Customer customer=customerService.findCustomerWithBanKcard(id);

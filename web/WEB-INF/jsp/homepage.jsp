@@ -51,7 +51,7 @@
                 <td>${customer.customer_birth}</td>
                 <td>${customer.customer_idcard}</td>
                 <td>${customer.customer_mobile}</td>
-                <td><a href="${pageContext.request.contextPath}/Customer/findCustomerWithBanKcard?id=${customer.id}">详情</a></td>
+                <td><a href="${pageContext.request.contextPath}/findCustomerWithBanKcard?id=${customer.id}">详情</a></td>
             </tr>
         </c:forEach>
     </table>

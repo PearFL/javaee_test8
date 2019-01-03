@@ -18,11 +18,14 @@ public class CustomerServiceImpl implements CustomerService {
 	public Customer findCustomerById(Integer id) {
 		return this.customerDao.findCustomerById(id);
 	}
+
+    //查询所有的用户信息（可以根据手机号、姓名、身份证号组合查询客户信息）
 	@Override
 	public List<Customer> findCustomerByConditions(Customer customer) {
 		return this.customerDao.findCustomerByConditions(customer);
 	}
 
+    //查询用户所有银行卡的信息
 	@Override
 	public Customer findCustomerWithBanKcard(Integer id) {
 		return this.customerDao.findCustomerWithBanKcard(id);
