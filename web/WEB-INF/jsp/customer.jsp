@@ -10,16 +10,21 @@
 <body>
 	<table border=1>
 		<tr>
-			<td>编号</td>
+			<td>数据库编号</td>
 			<td>名称</td>
-			<td>职业</td>
+			<td>性别</td>
+			<td>生日</td>
+			<td>卡号</td>
 			<td>电话</td>
 		</tr>
 		<tr>
 			<td>${customer.id}</td>
-			<td>${customer.username}</td>
-			<td>${customer.jobs}</td>
-			<td>${customer.phone}</td>
+			<td>${customer.customer_name}</td>
+			<td>${customer.customer_sex}</td>
+			<td>${customer.customer_birth}</td>
+			<td>${customer.customer_idcard}</td>
+			<td>${customer.customer_mobile}</td>
+
 		</tr>
 	</table>
 </body>
