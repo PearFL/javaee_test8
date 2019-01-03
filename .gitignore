@@ -2,3 +2,4 @@
 venv/
 captcha.gif
 */__pycache__/
+out/
