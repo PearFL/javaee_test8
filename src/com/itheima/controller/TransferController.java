@@ -34,10 +34,11 @@ public class TransferController {
         inbanKcard.setCard_id(transfer.getCard_id());
         inbanKcard.setCard_balance(transfer.getTransfer_amount());
         String message=transferService.transfer(transfer.getId(),inbanKcard);
-        Message message1=new Message();
-        message1.setMessage(message);
+
+        Message back=new Message();
+        back.setMessage(message);
 
         //打印JSON格式的响应
-        return message1;
+        return back;
     }
 }

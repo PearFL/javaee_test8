@@ -47,6 +47,6 @@ public class CustomerController {
 		Customer customer=customerService.findCustomerWithBanKcard(id);
 		model.addAttribute("customer",customer);
 		//返回客户详情展示页面
-		return "customerdetails";
+		return "cardsdetails";
 	}
 }

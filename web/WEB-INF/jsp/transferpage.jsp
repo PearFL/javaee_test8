@@ -13,8 +13,6 @@
 </body>
 <script type="text/javascript">
     function transfer() {
-        // alert(1)
-        // console.log($("#card_id").val());//入账卡号
         var id= "${carid}";
         //获取输入的转入卡号和金额
         var card_id= $("#card_id").val();
@@ -38,7 +36,7 @@
                 }
             },
             error : function (data) {
-                alert("${pageContext.request.contextPath}/AccountTransfer");
+                alert("出错啦");
             }
         });
     }

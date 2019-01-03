@@ -33,10 +33,10 @@ public class TransferServiceImpl implements TransferService {
         Card outbanKcard=this.transferDao.findCardById(id);
 
         if (inbanKcard==null){
-            return "转账账号不存在";
+            return "转账账号不存在，请核对";
         }
         if (outbanKcard.getCard_balance()<banKcard.getCard_balance()){
-            return "卡内余额不足";
+            return "余额不足，无法转账";
         }
         inbanKcard.setCard_balance(inbanKcard.getCard_balance()+banKcard.getCard_balance());
         outbanKcard.setCard_balance(outbanKcard.getCard_balance()-banKcard.getCard_balance());
