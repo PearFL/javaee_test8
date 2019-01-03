@@ -47,5 +47,14 @@ public class Card {
         this.customer_id = customer_id;
     }
 
-
+    @Override
+    public String toString() {
+        return "card{" +
+                "id=" + id +
+                ", card_id='" + card_id+ '\'' +
+                ", card_date=" + card_date +
+                ", card_balance='" + card_balance + '\'' +
+                ", customer_id=" + customer_id +
+                '}';
+    }
 }

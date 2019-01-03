@@ -5,7 +5,7 @@
 	<!--根据id查询客户信息 -->
 	<select id="findCustomerById" parameterType="Integer"
 		                               resultType="Customer">
-		select * from tb_customer where id = #{id}
+		select * from tb_customer where cusid = #{id}
 	</select>
 
 	<select id="findCustomerByConditions" parameterType="Customer" resultMap="CustomerResult">
@@ -22,8 +22,8 @@
 			</if>
 		</where>
 	</select>
-	<resultMap id="CustomerResult" type="customer">
-		<id property="id" column="id"/>
+	<resultMap id="CustomerResult" type="Customer">
+		<id property="id" column="cusid"/>
 		<result property="customer_name" column="customer_name"/>
 		<result property="customer_sex" column="customer_sex"/>
 		<result property="customer_birth" column="customer_birth"/>
@@ -34,20 +34,20 @@
     <select id="findCustomerWithBanKcard" parameterType="Integer" resultMap="CustomerWithBanKcardResult">
         SELECT a.*,b.*
         FROM tb_customer a,tb_card b
-        WHERE a.id=b.customer_id
-        AND a.id=#{id}
+        WHERE a.cusid=b.customer_id
+        AND a.cusid=#{id}
     </select>
-    <resultMap type="customer" id="CustomerWithBanKcardResult">
-        <id property="id" column="id"/>
+    <resultMap type="Customer" id="CustomerWithBanKcardResult">
+        <id property="id" column="cusid"/>
         <result property="customer_name" column="customer_name"/>
         <result property="customer_sex" column="customer_sex"/>
         <result property="customer_birth" column="customer_birth"/>
         <result property="customer_idcard" column="customer_idcard"/>
         <result property="customer_mobile" column="customer_mobile"/>
         <!-- 一对多关联映射：collection
-            ofType表示属性集合中元素的类型，List<BanKcard>属性即BanKcard类 -->
+            ofType表示属性集合中元素的类型，List<Card>属性即card类 -->
         <collection property="banKcardList" ofType="Card">
-            <id property="id" column="id"/>
+            <id property="id" column="carid"/>
             <result property="card_id" column="card_id"/>
             <result property="card_date" column="card_date"/>
             <result property="card_balance" column="card_balance"/>

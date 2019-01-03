@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace表示命名空间  -->
+<mapper namespace="com.itheima.dao.TransferDao">
+    <select id="findCardById" parameterType="Integer" resultType="Card">
+        SELECT * FROM tb_card WHERE carid=#{carid}
+    </select>
+    <select id="findCardIdByCardNum" parameterType="String" resultType="Integer">
+        SELECT carid FROM tb_card WHERE card_id=#{card_id}
+    </select>
+    <update id="transfer" parameterType="Card">
+        UPDATE tb_card SET card_balance=#{card_balance} WHERE card_id=#{card_id}
+    </update>
+</mapper>

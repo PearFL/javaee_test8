@@ -28,6 +28,7 @@ public class CustomerServiceImpl implements CustomerService {
     //查询用户所有银行卡的信息
 	@Override
 	public Customer findCustomerWithBanKcard(Integer id) {
+//        System.out.println("输出： "+this.customerDao.findCustomerWithBanKcard(id).getBanKcardList().toString());
 		return this.customerDao.findCustomerWithBanKcard(id);
 	}
 }

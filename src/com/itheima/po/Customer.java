@@ -74,6 +74,17 @@ public class Customer {
         this.banKcardList = banKcardList;
     }
 
-
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", customer_name='" + customer_name + '\'' +
+                ", customer_sex='" + customer_sex + '\'' +
+                ", customer_birth=" + customer_birth +
+                ", customer_idcard='" + customer_idcard + '\'' +
+                ", customer_mobile='" + customer_mobile + '\'' +
+                ", banKcardList=" + banKcardList +
+                '}';
+    }
 
 }

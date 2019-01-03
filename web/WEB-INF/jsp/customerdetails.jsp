@@ -31,12 +31,14 @@
             <th>余额</th>
             <th>操作</th>
         </tr>
-        <c:forEach items="${customer.banKcardList}" var="card">
+        <c:forEach items="${customer.banKcardList}" var="card" varStatus="status">
+            <%--${customer.banKcardList}--%>
+
         <tr>
             <td>${card.card_id}</td>
             <td>${card.card_date}</td>
             <td>${card.card_balance}</td>
-            <td><a href="${pageContext.request.contextPath}/Transfer/transferpage?card_id=${card.id}&customer_id=${customer.id}">转账</a></td>
+            <td><a href="${pageContext.request.contextPath}/transferpage?carid=${card.id}&cusid=${customer.id}">转账</a></td>
         </tr>
         </c:forEach>
     </table>

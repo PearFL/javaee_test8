@@ -7,7 +7,7 @@
 </head>
 <body>
 <div>
-    <form action="${pageContext.request.contextPath}/Customer/findCustomerByConditions" method="post">
+    <form action="${pageContext.request.contextPath}/findCustomerByConditions" method="post">
         <table>
             <tr>
                 <td>手机号：</td>
