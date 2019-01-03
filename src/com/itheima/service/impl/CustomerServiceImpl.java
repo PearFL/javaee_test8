@@ -5,6 +5,9 @@ import org.springframework.transaction.annotation.Transactional;
 import com.itheima.dao.CustomerDao;
 import com.itheima.po.Customer;
 import com.itheima.service.CustomerService;
+
+import java.util.List;
+
 @Service
 @Transactional
 public class CustomerServiceImpl implements CustomerService {
@@ -14,5 +17,14 @@ public class CustomerServiceImpl implements CustomerService {
 	//查询客户
 	public Customer findCustomerById(Integer id) {
 		return this.customerDao.findCustomerById(id);
+	}
+	@Override
+	public List<Customer> findCustomerByConditions(Customer customer) {
+		return this.customerDao.findCustomerByConditions(customer);
+	}
+
+	@Override
+	public Customer findCustomerWithBanKcard(Integer id) {
+		return this.customerDao.findCustomerWithBanKcard(id);
 	}
 }

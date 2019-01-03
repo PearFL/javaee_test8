@@ -5,6 +5,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.itheima.po.Customer;
 import com.itheima.service.CustomerService;
+
+import java.util.List;
+
 @Controller
 public class CustomerController {
 	@Autowired
@@ -18,5 +21,20 @@ public class CustomerController {
 		model.addAttribute("customer", customer);
 		//返回客户信息展示页面
 		return "customer";
+	}
+
+	@RequestMapping("/findCustomerByConditions")
+	public String findCustomerByConditions(Customer customer, Model model) {
+		List<Customer> customers=customerService.findCustomerByConditions(customer);
+		model.addAttribute("customers",customers);
+		//返回客户信息展示页面
+		return "homepage";
+	}
+	@RequestMapping("/findCustomerWithBanKcard")
+	public String findCustomerWithBanKcard(Integer id,Model model) {
+		Customer customer=customerService.findCustomerWithBanKcard(id);
+		model.addAttribute("customer",customer);
+		//返回客户详情展示页面
+		return "customerdetails";
 	}
 }

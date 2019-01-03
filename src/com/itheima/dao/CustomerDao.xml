@@ -7,4 +7,27 @@
 		                               resultType="Customer">
 		select * from tb_customer where id = #{id}
 	</select>
+
+	<select id="findCustomerByConditions" parameterType="Customer" resultMap="CustomerResult">
+		SELECT * FROM tb_customer
+		<where>
+			<if test="customer_mobile !=null and customer_mobile !=''">
+				AND customer_mobile =#{customer_mobile}
+			</if>
+			<if test="customer_name !=null and customer_name !=''">
+				AND customer_name LIKE '%' #{customer_name} '%'
+			</if>
+			<if test="customer_idcard !=null and customer_idcard !=''">
+				AND customer_idcard =#{customer_idcard}
+			</if>
+		</where>
+	</select>
+	<resultMap id="CustomerResult" type="customer">
+		<id property="id" column="id"/>
+		<result property="customer_name" column="customer_name"/>
+		<result property="customer_sex" column="customer_sex"/>
+		<result property="customer_birth" column="customer_birth"/>
+		<result property="customer_idcard" column="customer_idcard"/>
+		<result property="customer_mobile" column="customer_mobile"/>
+	</resultMap>
 </mapper>
