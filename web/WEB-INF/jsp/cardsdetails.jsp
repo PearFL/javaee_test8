@@ -44,7 +44,7 @@
         </tr>
     </table>
     <table class="table table-striped">
-        <tr> <td colspan="4" align="center">客户信息</td></tr>
+        <tr> <td colspan="4" align="center">银行卡信息</td></tr>
         <tr>
             <th>卡号</th>
             <th>办卡日期</th>

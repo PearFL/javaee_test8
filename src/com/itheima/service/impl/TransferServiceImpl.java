@@ -14,16 +14,7 @@ public class TransferServiceImpl implements TransferService {
     @Autowired
     private TransferDao transferDao;
 
-    @Override
-    public Card findCardById(Integer id) {
-        return this.transferDao.findCardById(id);
-    }
-
-    @Override
-    public Integer findCardIdByCardNum(String cardnum) {
-        return this.transferDao.findCardIdByCardNum(cardnum);
-    }
-
+    // 转账操作
     @Override
     public String transfer(Integer id, Card banKcard) {
 
