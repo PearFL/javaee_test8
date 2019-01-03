@@ -26,6 +26,7 @@ public class TransferServiceImpl implements TransferService {
 
     @Override
     public String transfer(Integer id, Card banKcard) {
+
         Integer inbid=this.transferDao.findCardIdByCardNum(banKcard.getCard_id());
         System.out.println("inbid: "+inbid);
         Card inbanKcard=this.transferDao.findCardById(inbid);

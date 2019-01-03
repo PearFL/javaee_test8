@@ -14,6 +14,14 @@ public class Customer {
     private String customer_mobile;//手机号码
     private List<Card> banKcardList;//客户关联的银行卡
 
+    public List<Card> getBanKcardList() {
+        return banKcardList;
+    }
+
+    public void setBanKcardList(List<Card> banKcardList) {
+        this.banKcardList = banKcardList;
+    }
+
     public String getCustomer_mobile() {
         return customer_mobile;
     }
@@ -64,15 +72,6 @@ public class Customer {
         this.customer_idcard = customer_idcard;
     }
 
-
-
-    public List<Card> getBanKcardList() {
-        return banKcardList;
-    }
-
-    public void setBanKcardList(List<Card> banKcardList) {
-        this.banKcardList = banKcardList;
-    }
 
     @Override
     public String toString() {
