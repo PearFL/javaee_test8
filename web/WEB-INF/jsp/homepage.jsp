@@ -12,15 +12,15 @@
             <tr>
                 <td>手机号：</td>
                 <td>
-                    <input type="text" name="phone" value="${phone}"/>
+                    <input type="text" name="customer_mobile" value="${customer_mobile}"/>
                 </td>
                 <td>姓名：</td>
                 <td>
-                    <input type="text" name="cname" value="${cname}"/>
+                    <input type="text" name="customer_name" value="${customer_name}"/>
                 </td>
                 <td>身份证号：</td>
                 <td>
-                    <input type="text" name="idcard" value="${idcard}"/>
+                    <input type="text" name="customer_idcard" value="${customer_idcard}"/>
                 </td>
                 <td colspan="2">
                     <input type="submit" value="点击查询"/>
