@@ -27,7 +27,7 @@
 <body>
 <div>
     <table class="table table-striped">
-        <tr>客户基本信息如下：</tr>
+        <tr><td colspan="5" align="center">客户信息</td></tr>
         <tr>
             <th>姓名</th>
             <th>性别</th>
@@ -44,7 +44,7 @@
         </tr>
     </table>
     <table class="table table-striped">
-        <tr> 客户的银行卡信息如下:</tr>
+        <tr> <td colspan="4" align="center">客户信息</td></tr>
         <tr>
             <th>卡号</th>
             <th>办卡日期</th>
