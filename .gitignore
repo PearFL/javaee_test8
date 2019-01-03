@@ -3,4 +3,3 @@ venv/
 captcha.gif
 */__pycache__/
 out/
-/config/db.properties
